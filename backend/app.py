@@ -2,6 +2,15 @@ from flask import Flask, request
 from flask_restful import Api, Resource
 from flasgger import Swagger
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
+
+# load environment variables
+load_dotenv()
+
+mongo_uri = os.getenv("MONGODB_URI")
+
+# create flask app
 
 app = Flask(__name__)
 api = Api(app)
@@ -44,8 +53,11 @@ class Account(Resource):
             description: account created
         """
         data = request.get_json()
-        accounts.insert_one(data)
-        return { 'id': 123 }
+        response = accounts.insert_one(data)
+        if response.acknowledged:
+            return { 'id': str(response.inserted_id) }
+        else:
+            return { 'error': 'account not created' }
 
 api.add_resource(Account, '/accounts')
 

@@ -8,6 +8,9 @@ instance/
 venv/
 ENV/
 
+# python env
+.env
+
 # IDE files
 .vscode/
 .idea/
