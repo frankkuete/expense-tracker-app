@@ -8,13 +8,6 @@ instance/
 venv/
 ENV/
 
-# python env
-.env
-
-# IDE files
-.vscode/
-.idea/
-
 # Log files
 *.log
 
@@ -23,3 +16,25 @@ ENV/
 
 # Other
 .DS_Store
+
+# Dependency directories
+node_modules/
+
+# Environment variables file
+.env
+
+# Next.js build directory
+.next/
+
+# Log files
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
