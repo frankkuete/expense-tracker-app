@@ -1,0 +1,22 @@
+# Flask related
+__pycache__/
+instance/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Compiled Python files
+*.pyc
+
+# Other
+.DS_Store
