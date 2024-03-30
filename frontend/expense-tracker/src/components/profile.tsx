@@ -1,7 +1,7 @@
 import { getSession } from "@auth0/nextjs-auth0";
 
 export default async function Profile() {
-    const { user } = await getSession();
+    const { user }: any = await getSession();
     return (
         user && (
             <div>
