@@ -2,7 +2,8 @@ name: Deploy Frontend to Render
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - deploy/frontend
   
 jobs:
   deploy:
